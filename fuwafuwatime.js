@@ -1,12 +1,11 @@
 (function ( $ ) {
     $.fn.fuwafuwa = function(options) {
-
         var defaults = {
-            time:10000
+            animation:1000,
+            settime:0
         };
         var setting = $.extend(defaults, options);
-
-        $(this).css({display:'block',opacity:'0'}).animate({opacity:'1'},setting.time);
+        $(this).delay(setting.settime).css({display:'block',opacity:'0'}).animate({opacity:'1'},setting.animation);
         return(this);
     };
 }( jQuery ));
