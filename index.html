@@ -7,14 +7,21 @@
 <script type='text/javascript' src='fuwafuwatime.js'></script>
 <script type="text/javascript">
     $(function(){
-     $("h1").fuwafuwa();
+     $("h1").fuwafuwa({
+        animation:1000, // アニメーションのフェードの時間
+        settime:2000 //表示が始まる時間
+     })
+     .fuwafuwaout({
+        animation:1000,
+        settimeout:2000 //表示が終わる時間
+     });
     });
 </script>
 </head>
 
 <body>
 
-<h1 class="test">ふわふわするよ</h1>
+<h1>ふわふわするよ</h1>
 
 </body>
 </html>
